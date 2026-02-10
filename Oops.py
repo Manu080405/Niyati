@@ -36,10 +36,12 @@ while True:
     except ValueError:
         print("Invalid choice")
         continue
-
+    
+    if choice==1:
+        print("Option not availble")
+        break
     if choice == 2:
         n = input("Enter the Account name : ")
-
 
         if n not in data['user_name']:
             print("User Not Found")
@@ -51,7 +53,7 @@ while True:
         index = data['user_name'].index(n)
 
         try:
-            p = int(input("Enter the Passcode : "))
+            p = int(input("Enter the Passcod : "))
         except ValueError:
             print("Passcode must be numbers only")
             continue

@@ -39,7 +39,7 @@ while True:
     
     if choice==1:
         print("Option not availble")
-        break
+        continue
     if choice == 2:
         n = input("Enter the Account name : ")
 

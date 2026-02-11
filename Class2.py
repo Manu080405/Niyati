@@ -1,4 +1,4 @@
-from OopAdv import Python_Adv_Da
+from Class1 import Python_Adv_Da
 
 class Department(Python_Adv_Da):
   def __init__(self,name,age,dept):

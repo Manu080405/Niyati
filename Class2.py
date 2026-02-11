@@ -1,4 +1,5 @@
 from Class1 import Python_Adv_Da
+from Class3 import Mentor
 
 class Department(Python_Adv_Da):
   def __init__(self,name,age,dept):

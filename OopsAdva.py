@@ -10,4 +10,12 @@ class Department(Python_Adv_Da):
 
 
 res1=Department("Manu",21,"AI&DS")
+res2=Department("Anu",20,"AI&DS")
+res3=Department("Ranu",20,"AI&DS")
+res4=Department("Reenu",21,"AI&DS")
+res5=Department("Meenu",21,"AI&DS")
 res1.display()
+res2.display()
+res3.display()
+res4.display()
+res5.display()

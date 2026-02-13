@@ -1,9 +1,1 @@
 notification_id,account_number,message,date
-5afb2797,1002,Deposited 10000.0. New Balance: 18000.0,2026-02-13 09:28:40
-af4b7f8b,1002,Withdrawn 8000.0. New Balance: 10000.0,2026-02-13 09:28:57
-41170f16,1001,Transferred 500.0 to 1002,2026-02-13 09:29:43
-34feba3e,1002,Received 500.0 from 1001,2026-02-13 09:29:43
-3786a9ad,1001,Deposited 10000.0. New Balance: 31500.0,2026-02-13 09:47:53
-1fc9f089,1001,Withdrawn 500.0. New Balance: 31000.0,2026-02-13 09:48:04
-b998a8b9,1001,Transferred 1000.0 to 1002,2026-02-13 09:48:17
-dece674a,1002,Received 1000.0 from 1001,2026-02-13 09:48:17

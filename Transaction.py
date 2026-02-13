@@ -7,14 +7,14 @@ accounts_file = "accounts.csv"
 transactions_file = "transactions.csv"
 notifications_file = "notifications.csv"
 
-# ================= FILE CREATION ================= #
+
 def create_files():
     if not os.path.exists(accounts_file):
         with open(accounts_file, "w", newline="") as f:
             writer = csv.writer(f)
             writer.writerow(["account_number", "name", "balance", "status"])
             writer.writerow(["1001", "John", "10000", "active"])
-            writer.writerow(["1002", "Mary", "8000", "active"])
+            writer.writerow(["1002", "Adi", "8000", "active"])
 
     if not os.path.exists(transactions_file):
         with open(transactions_file, "w", newline="") as f:
@@ -27,7 +27,7 @@ def create_files():
             writer.writerow(["notification_id", "account_number", "message", "date"])
 
 
-# ================= ACCOUNT VALIDATION ================= #
+
 class AccountValidation:
     @staticmethod
     def get_account(acc_no):
@@ -39,7 +39,7 @@ class AccountValidation:
         return None
 
 
-# ================= BALANCE MANAGEMENT ================= #
+
 class BalanceManagement:
     @staticmethod
     def update_balance(acc_no, new_balance):
@@ -57,7 +57,6 @@ class BalanceManagement:
             writer.writerows(rows)
 
 
-# ================= BASE TRANSACTION CLASS ================= #
 class Transaction:
     def __init__(self, acc_no, amount, t_type):
         self.transaction_id = str(uuid.uuid4())[:8]
@@ -75,7 +74,7 @@ class Transaction:
                              self.date, self.status])
 
 
-# ================= NOTIFICATION MODULE ================= #
+
 class Notification:
     @staticmethod
     def send(acc_no, message):
@@ -86,7 +85,7 @@ class Notification:
         print("Notification:", message)
 
 
-# ================= FRAUD DETECTION MODULE ================= #
+
 class FraudDetection:
     @staticmethod
     def check(amount):
@@ -94,7 +93,7 @@ class FraudDetection:
             print("⚠ Warning: High value transaction detected!")
 
 
-# ================= DEPOSIT MODULE ================= #
+
 class Deposit(Transaction):
     def process(self):
         acc = AccountValidation.get_account(self.acc_no)
@@ -116,7 +115,7 @@ class Deposit(Transaction):
             f"Deposited {self.amount}. New Balance: {new_balance}")
 
 
-# ================= WITHDRAWAL MODULE ================= #
+
 class Withdrawal(Transaction):
     def process(self):
         acc = AccountValidation.get_account(self.acc_no)
@@ -142,7 +141,7 @@ class Withdrawal(Transaction):
             f"Withdrawn {self.amount}. New Balance: {new_balance}")
 
 
-# ================= FUND TRANSFER MODULE ================= #
+
 class FundTransfer:
     @staticmethod
     def transfer(sender, receiver, amount):
@@ -172,7 +171,7 @@ class FundTransfer:
         Notification.send(receiver, f"Received {amount} from {sender}")
 
 
-# ================= TRANSACTION HISTORY ================= #
+
 class TransactionHistory:
     @staticmethod
     def view(acc_no):
@@ -184,7 +183,7 @@ class TransactionHistory:
                     print(row)
 
 
-# ================= TRANSACTION REVERSAL ================= #
+
 class TransactionReversal:
     @staticmethod
     def reverse(transaction_id):
@@ -210,7 +209,7 @@ class TransactionReversal:
             print("Transaction not found")
 
 
-# ================= TRANSACTION REPORT ================= #
+
 class TransactionReport:
     @staticmethod
     def generate():
@@ -230,7 +229,7 @@ class TransactionReport:
         print("Total Withdrawals:", total_withdraw)
 
 
-# ================= MAIN MENU ================= #
+
 if __name__ == "__main__":
     create_files()
 
@@ -274,6 +273,7 @@ if __name__ == "__main__":
             TransactionReport.generate()
 
         elif ch == "7":
+            print("Exiting......")
             break
 
         else:
